@@ -1,0 +1,163 @@
+.card{
+    margin: 2% 20%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    border: 2px solid #e8e0d0;
+    border-radius: 20px;
+    padding: 24px;
+    background: #fffdf8;
+    box-shadow: 0 8px 24px -12px rgba(61,47,34,.15);
+    font-family: "Open Sans", sans-serif;
+}
+
+button{
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.card-img{
+    width: 35%;
+}
+
+.card-img img{
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h2{
+    font-size: 28pt;
+    color: #3d2f22;
+    margin: 0 0 20px;
+}
+
+.all-btn{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 12px 0 20px;
+}
+
+.weight-btn{
+    width: 100px;
+    height: 40px;
+    font-size: 14pt;
+    border-radius: 6px;
+    border: 1.5px solid #d9cdb6;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.weight-btn.non-active{
+    background-color: #fff;
+    color: #95846f;
+}
+
+.weight-btn.non-active:hover{
+    border-color: #6f8f5c;
+    color: #5a7649;
+}
+
+.weight-btn.active{
+    background-color: #6f8f5c;
+    border-color: #6f8f5c;
+    color: #fff;
+    cursor: default;
+}
+
+.SKU{
+    margin: 0 0 20px;
+    font-size: 9pt;
+    color: #95846f;
+}
+
+.SKU span{
+    color: #3d2f22;
+}
+
+.basket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #6f8f5c;
+    color: #fff;
+    font-size: 14pt;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.basket .old-price{
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+.basket:hover{
+    background-color: #5a7649;
+}
+
+@media (max-width: 1200px) {
+    .card{
+        flex-direction: column;
+        margin: 2% 10%;
+        gap: 24px;
+        padding: 20px;
+    }
+
+    .card-img{
+        width: 50%;
+    }
+    
+    .card-info{
+        align-items: center;
+        text-align: center;
+    }
+
+    .weight-btn{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card{
+        margin: 16px;
+        padding: 16px;
+    }
+
+    .card-img{
+        width: 70%;
+    }
+
+    .card-info h2{
+        font-size: 20pt;
+    }
+
+    .all-btn{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin: 12px 0 20px;
+    }
+
+    .weight-btn{
+        height: 40px;
+        width: 80px;
+        font-size: 12pt;
+    }
+
+    .basket{
+        width: 100%;
+    }
+}
+
